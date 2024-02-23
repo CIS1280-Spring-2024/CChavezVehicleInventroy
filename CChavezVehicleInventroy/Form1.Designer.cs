@@ -111,6 +111,7 @@
             // 
             // txbResults
             // 
+            txbResults.BackColor = SystemColors.ActiveCaption;
             txbResults.Location = new Point(18, 242);
             txbResults.Multiline = true;
             txbResults.Name = "txbResults";
@@ -140,17 +141,21 @@
             // 
             // txbVIN
             // 
+            txbVIN.ForeColor = SystemColors.ScrollBar;
             txbVIN.Location = new Point(123, 89);
             txbVIN.Name = "txbVIN";
             txbVIN.Size = new Size(182, 31);
             txbVIN.TabIndex = 3;
+            txbVIN.Text = "XX-000-00-0000";
             // 
             // txbLicense
             // 
+            txbLicense.ForeColor = SystemColors.ScrollBar;
             txbLicense.Location = new Point(123, 58);
             txbLicense.Name = "txbLicense";
             txbLicense.Size = new Size(182, 31);
             txbLicense.TabIndex = 2;
+            txbLicense.Text = "XXX-000";
             txbLicense.TextChanged += textBox1_TextChanged;
             // 
             // label2
@@ -185,6 +190,7 @@
             // 
             // txbSummary
             // 
+            txbSummary.BackColor = SystemColors.ActiveCaption;
             txbSummary.Location = new Point(49, 248);
             txbSummary.Multiline = true;
             txbSummary.Name = "txbSummary";

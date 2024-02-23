@@ -53,7 +53,6 @@ namespace CChavezVehicleInventroy
             {
                 SUV suv = new SUV(txbVIN.Text, txbLicense.Text);
                 vehicles.Add(suv);
-                //Refresh the list box
                 lbInventory.DataSource = null;
                 lbInventory.DataSource = vehicles;
                 txbResults.Text = "Successfuly added SUV";
@@ -63,7 +62,6 @@ namespace CChavezVehicleInventroy
             {
                 Motorcycle motorcycle = new Motorcycle(txbVIN.Text, txbLicense.Text);
                 vehicles.Add(motorcycle);
-                //Refresh the list box
                 lbInventory.DataSource = null;
                 lbInventory.DataSource = vehicles;
                 txbResults.Text = "Successfuly added motorcycle";
