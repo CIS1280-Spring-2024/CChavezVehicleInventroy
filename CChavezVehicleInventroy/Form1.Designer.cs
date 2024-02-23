@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             label4 = new Label();
             label3 = new Label();
             txbResults = new TextBox();
@@ -44,6 +45,7 @@
             lbInventory = new ListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabPage2.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +63,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(txbResults);
@@ -78,10 +81,20 @@
             tabPage1.Text = "New Vehicle Form";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = CChavezVehicleInventory.Properties.Resources.Subaru_Logo;
+            pictureBox1.Location = new Point(323, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 75);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(64, 135);
+            label4.Location = new Point(18, 142);
             label4.Name = "label4";
             label4.Size = new Size(49, 25);
             label4.TabIndex = 8;
@@ -98,16 +111,16 @@
             // 
             // txbResults
             // 
-            txbResults.Location = new Point(42, 242);
+            txbResults.Location = new Point(18, 242);
             txbResults.Multiline = true;
             txbResults.Name = "txbResults";
             txbResults.ReadOnly = true;
-            txbResults.Size = new Size(431, 91);
+            txbResults.Size = new Size(455, 91);
             txbResults.TabIndex = 6;
             // 
             // btAdd
             // 
-            btAdd.Location = new Point(169, 190);
+            btAdd.Location = new Point(123, 197);
             btAdd.Name = "btAdd";
             btAdd.Size = new Size(112, 34);
             btAdd.TabIndex = 5;
@@ -118,8 +131,8 @@
             // cbType
             // 
             cbType.FormattingEnabled = true;
-            cbType.Items.AddRange(new object[] { "Sedan", "Truck" });
-            cbType.Location = new Point(169, 135);
+            cbType.Items.AddRange(new object[] { "Sedan", "Truck", "SUV", "Motorcycle" });
+            cbType.Location = new Point(123, 142);
             cbType.Name = "cbType";
             cbType.Size = new Size(182, 33);
             cbType.TabIndex = 4;
@@ -127,14 +140,14 @@
             // 
             // txbVIN
             // 
-            txbVIN.Location = new Point(169, 82);
+            txbVIN.Location = new Point(123, 89);
             txbVIN.Name = "txbVIN";
             txbVIN.Size = new Size(182, 31);
             txbVIN.TabIndex = 3;
             // 
             // txbLicense
             // 
-            txbLicense.Location = new Point(169, 51);
+            txbLicense.Location = new Point(123, 58);
             txbLicense.Name = "txbLicense";
             txbLicense.Size = new Size(182, 31);
             txbLicense.TabIndex = 2;
@@ -143,7 +156,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(64, 82);
+            label2.Location = new Point(18, 89);
             label2.Name = "label2";
             label2.Size = new Size(37, 25);
             label2.TabIndex = 1;
@@ -152,7 +165,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(64, 51);
+            label1.Location = new Point(18, 58);
             label1.Name = "label1";
             label1.Size = new Size(68, 25);
             label1.TabIndex = 0;
@@ -193,13 +206,16 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.HotTrack;
+            ClientSize = new Size(715, 441);
             Controls.Add(tabControl1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "New Vehicle Form";
+            Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ResumeLayout(false);
@@ -221,5 +237,6 @@
         private TextBox txbLicense;
         private TextBox txbSummary;
         private ListBox lbInventory;
+        private PictureBox pictureBox1;
     }
 }

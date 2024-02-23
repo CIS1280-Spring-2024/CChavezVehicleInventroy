@@ -20,6 +20,10 @@ namespace CChavezVehicleInventory
         public abstract string GetDescription();
 
         //  3.2.	Notice that some of our properties/methods are concrete and some are declared abstract.
+        //
+        //          Class notes Abstracts are reqierments in inheriting an abstract class
+        //          You can only  override abstract and virtual
+        //
     }
 
 }

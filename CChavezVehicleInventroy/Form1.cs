@@ -8,6 +8,7 @@ namespace CChavezVehicleInventroy
 {
     public partial class Form1 : Form
     {
+
         //  6.12.	Add a List of Vehicles to your form class:
         private List<Vehicle> vehicles = new List<Vehicle>();
 
@@ -48,9 +49,27 @@ namespace CChavezVehicleInventroy
                 //      null then re-assign it to cause the ListBox
                 //      to refresh.
             }
+            else if (cbType.Text == "SUV")
+            {
+                SUV suv = new SUV(txbVIN.Text, txbLicense.Text);
+                vehicles.Add(suv);
+                //Refresh the list box
+                lbInventory.DataSource = null;
+                lbInventory.DataSource = vehicles;
+                txbResults.Text = "Successfuly added SUV";
 
+            }
+            else if (cbType.Text == "Motorcycle")
+            {
+                Motorcycle motorcycle = new Motorcycle(txbVIN.Text, txbLicense.Text);
+                vehicles.Add(motorcycle);
+                //Refresh the list box
+                lbInventory.DataSource = null;
+                lbInventory.DataSource = vehicles;
+                txbResults.Text = "Successfuly added motorcycle";
+
+            }
         }
-
         private void lbInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //  6.16.   Clicking on the ListBox control would create an index changed
@@ -63,6 +82,11 @@ namespace CChavezVehicleInventroy
             txbSummary.Text = vehicle.GetDescription();
             //  6.19.Notice that we cast lbInventory.SelecedItem to Vehicle
             //  class. The list boxe’s SelectedItem property is an Object
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
